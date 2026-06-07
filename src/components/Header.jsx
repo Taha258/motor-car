@@ -77,14 +77,15 @@ export default function Header() {
       <div className="bg-[#0f172a] border-2 border-white/20 rounded-2xl mx-auto px-6 py-3 max-w-5xl">
         <div className="flex items-center justify-between">
 
-          {/* Logo */}
+          {/* Logo - SIZE BADHA DIYA GAYA HAI */}
           <Link href="/" className="flex items-center gap-2">
             <Image
               src="/images/WalCars - Logo Design - 01 (1).png"
               alt="WalCars Logo"
-              width={48}
-              height={48}
-              className="rounded-full"
+              width={72}
+              height={72}
+              className="rounded-full object-contain"
+              priority
             />
           </Link>
 

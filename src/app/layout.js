@@ -1,3 +1,4 @@
+// src/app/layout.js
 import { Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import Header from '@/src/components/Header';
@@ -18,12 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${spaceGrotesk.variable} font-sans`}>
-        {/* Header ko fixed/absolute position do */}
-        <div className="relative">
-          <Header />
-          <main>{children}</main>
-          <Footer/>
-        </div>
+        {children}
       </body>
     </html>
   );

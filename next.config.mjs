@@ -1,8 +1,15 @@
+// next.config.mjs
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // Static export ke liye
+  // output: 'export' hata diya — Sanity Studio aur dynamic routes ke saath kaam nahi karta
   images: {
-    unoptimized: true, // Static export mein images ke liye zaroori
+    remotePatterns: [
+      {
+        // Sanity ki images ke liye
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+      },
+    ],
   },
 };
 
